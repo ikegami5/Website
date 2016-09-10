@@ -1,3 +1,18 @@
 <?php
-echo "hello PHP!";
+
+// コメント
+# コメント
+/*
+コメント
+コメント
+*/
+
+echo "Hello from the TOP!";
+
 ?>
+<!DOCTYPE html>
+<html lang="ja">
+<body>
+	<p>Hello World<?php echo " from PHP"; ?></p>
+</body>
+</html>
