@@ -1,8 +1,8 @@
 <?php
 
 //変数
-$message = "Hello from PHP!<br>";
-echo $message;
+$message = "Hello from PHP!";
+echo $message."<br>";
 
 //演算
 $int1 = 1;
@@ -25,7 +25,9 @@ echo "<br>";
 //文字列
 $str = "PHP";
 $hello = "hello $str";
+$wrong = 'hello $str';
 echo $hello."<br>";
+echo $wrong."<br>";
 
 
 
