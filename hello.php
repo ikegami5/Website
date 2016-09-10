@@ -10,9 +10,6 @@ $int2 = 2;
 $int3 = 3;
 echo $int1 + $int2;
 
-//べき乗
-echo $int2 ** $int3;
-
 //型を表示
 var_dump($message);
 
