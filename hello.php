@@ -1,18 +1,6 @@
 <?php
 
-// コメント
-# コメント
-/*
-コメント
-コメント
-*/
+$message = "Hello from PHP!\n";
+echo $message;
 
-echo "Hello from the TOP!";
-
-?>
-<!DOCTYPE html>
-<html lang="ja">
-<body>
-	<p>Hello World<?php echo " from PHP"; ?></p>
-</body>
-</html>
+var_dump($message);
