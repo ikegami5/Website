@@ -87,6 +87,26 @@ do {
 	echo $index." ";
 } while ($index > 0);
 
+//for,break,continue
+for ($index = 0; $index < 10; $index++) { 
+	echo $index." ";
+}
+echo $br;
+for ($index = 0; $index < 10; $index++) { 
+	if ($index === 5) {
+		break;
+	}
+	echo $index." ";
+}
+echo $br;
+for ($index = 0; $index < 10; $index++) {
+	if ($index === 5) {
+		continue;
+	} 
+	echo $index." ";
+}
+echo $br;
+
 
 ?>
 <!DOCTYPE html>
