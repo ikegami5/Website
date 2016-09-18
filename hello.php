@@ -48,14 +48,14 @@ if (1 and true and "hello") {
 }
 
 //三項演算子
-$seven = 7
-$five = 5
+$seven = 7;
+$five = 5;
 $max = ($seven > $five) ? $seven : $five
 //it means ...
 if ($seven > $five) {
-	$max = $seven
+	$max = $seven;
 } else {
-	$max = $five
+	$max = $five;
 }
 echo $max;
 
