@@ -75,6 +75,17 @@ switch ($signal) {
 		break;
 }
 
+//while
+$index = 0;
+while ($index < 10) {
+	echo $index." ";
+	$index++;
+}
+echo $br;
+do {
+	echo $index." ";
+	$index--
+} while ($index > 0);
 
 
 ?>
