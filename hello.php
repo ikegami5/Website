@@ -39,6 +39,29 @@ if ($score > 80) {
 	echo "soso";
 }
 
+//真偽値
+if (0 or false or null or "" or "0") {
+	echo "false";
+}
+if (1 and true and "hello") {
+	echo "true";
+}
+
+//三項演算子
+$seven = 7
+$five = 5
+$max = ($seven > $five) ? $seven : $five
+//it means ...
+if ($seven > $five) {
+	$max = $seven
+} else {
+	$max = $five
+}
+echo $max;
+
+
+
+
 
 ?>
 <!DOCTYPE html>
