@@ -86,6 +86,7 @@ do {
 	$index--;
 	echo $index." ";
 } while ($index > 0);
+echo $br;
 
 //for,break,continue
 for ($index = 0; $index < 10; $index++) { 
@@ -106,6 +107,21 @@ for ($index = 0; $index < 10; $index++) {
 	echo $index." ";
 }
 echo $br;
+
+//配列
+$sales = array(
+	"taguchi" => 200,
+	"fkoji" => 800,
+	"dot" => 600,
+);
+echo $sales["fkoji"].$br;
+$colors = array("red", "blue", "pink");
+echo $colors[1].$br;
+
+
+
+
+
 
 
 ?>
