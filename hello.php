@@ -1,33 +1,35 @@
 <?php
 
+$br = "<br>";
+
 //変数
 $message = "Hello from PHP!";
-echo $message."<br>";
+echo $message.$br;
 
 //演算
 $int1 = 1;
 $int2 = 2;
 $int3 = 3;
-echo ($int1 + $int2)."<br>";
+echo ($int1 + $int2).$br;
 
 //型を表示
 var_dump($message);
-echo "<br>";
+echo $br;
 
 //定数
 define("MY_FINAL_VALUE", "14");
-echo MY_FINAL_VALUE."<br>";
+echo MY_FINAL_VALUE.$br;
 
 //特殊定数(行数)
 var_dump(__LINE__);
-echo "<br>";
+echo $br;
 
 //文字列
 $str = "PHP";
 $hello = "hello $str";
 $wrong = 'hello $str';
-echo $hello."<br>";
-echo $wrong."<br>";
+echo $hello.$br;
+echo $wrong.$br;
 
 //if
 $score = 85;
@@ -38,14 +40,17 @@ if ($score > 80) {
 } else {
 	echo "soso";
 }
+echo $br;
 
 //真偽値
-if (0 or false or null or "" or "0") {
+if (!(0 or false or null or "" or "0")) {
 	echo "false";
 }
+echo $br;
 if (1 and true and "hello") {
 	echo "true";
 }
+echo $br;
 
 //三項演算子
 $seven = 7;
@@ -57,7 +62,7 @@ if ($seven > $five) {
 } else {
 	$max = $five;
 }
-echo $max;
+echo $max.$br;
 
 
 
