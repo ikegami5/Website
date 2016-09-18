@@ -84,7 +84,7 @@ while ($index < 10) {
 echo $br;
 do {
 	echo $index." ";
-	$index--
+	$index--;
 } while ($index > 0);
 
 
