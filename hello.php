@@ -83,8 +83,8 @@ while ($index < 10) {
 }
 echo $br;
 do {
-	echo $index." ";
 	$index--;
+	echo $index." ";
 } while ($index > 0);
 
 
