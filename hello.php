@@ -68,43 +68,43 @@ echo $max.$br;
 $signal = "red";
 switch ($signal) {
 	case "red":
-		echo "stop".$br;
+		echo "stop$br";
 		break;
 	default:
-		echo "wrong".$br;
+		echo "wrong$br";
 		break;
 }
 
 //while
 $index = 0;
 while ($index < 10) {
-	echo $index." ";
+	echo "$index ";
 	$index++;
 }
 echo $br;
 do {
 	$index--;
-	echo $index." ";
+	echo "$index ";
 } while ($index > 0);
 echo $br;
 
 //for,break,continue
 for ($index = 0; $index < 10; $index++) { 
-	echo $index." ";
+	echo "$index ";
 }
 echo $br;
 for ($index = 0; $index < 10; $index++) { 
 	if ($index === 5) {
 		break;
 	}
-	echo $index." ";
+	echo "$index ";
 }
 echo $br;
 for ($index = 0; $index < 10; $index++) {
 	if ($index === 5) {
 		continue;
 	} 
-	echo $index." ";
+	echo "$index ";
 }
 echo $br;
 
@@ -118,9 +118,20 @@ echo $sales["fkoji"].$br;
 $colors = array("red", "blue", "pink");
 echo $colors[1].$br;
 
+//foreach
+foreach ($sales as $key => $value) {
+	echo "($key) $value ";
+}
+echo $br;
+foreach ($colors as $value) {
+	echo "$value ";
+}
+echo $br;
 
-
-
+//colon using for, while, if, foreach: confortable for writing in html
+for ($index = 0; $index < 10; $index++):
+	echo "$index ";
+endfor;
 
 
 
