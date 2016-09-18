@@ -110,11 +110,11 @@ echo $br;
 
 //配列
 $sales = array(
-	"taguchi" => 200,
-	"fkoji" => 800,
-	"dot" => 600,
+	"two hundred" => 200,
+	"eight hundred" => 800,
+	"six hundred" => 600,
 );
-echo $sales["fkoji"].$br;
+echo $sales["eight hundred"].$br;
 $colors = array("red", "blue", "pink");
 echo $colors[1].$br;
 
