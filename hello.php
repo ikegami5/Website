@@ -64,7 +64,16 @@ if ($seven > $five) {
 }
 echo $max.$br;
 
-
+//switch
+$signal = "red";
+switch ($signal) {
+	case "red":
+		echo "stop".$br;
+		break;
+	default:
+		echo "wrong".$br;
+		break;
+}
 
 
 
