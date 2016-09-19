@@ -257,10 +257,10 @@ $human->speak();
 // exception
 function div($x, $y) {
 	try {
-		if ($b === 0) {
+		if ($y === 0) {
 			throw new Exception("Cannot divide by 0<br>");
 		}
-		echo ($a / $b)."<br>";
+		echo ($x / $y)."<br>";
 	} catch (Exception $e) {
 		echo $e->getMessage();
 	}
