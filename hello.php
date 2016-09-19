@@ -164,6 +164,7 @@ $list = array(2, 4, 6, 8, 10);
 echo count($list).$br;
 echo implode(",", $list).$br;
 
+//class
 
 
 
@@ -174,6 +175,7 @@ echo implode(",", $list).$br;
 <head>
 	<title>PHP練習</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./style.css" />
 </head>
 <body>
 	<p>htmlに<?php echo "php" ?>を埋め込む</p>
