@@ -207,7 +207,7 @@ class Utility {
 
 }
 Utility::message();
-echo User::count.$br;
+echo User::$count.$br;
 
 
 
