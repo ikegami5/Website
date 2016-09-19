@@ -180,6 +180,22 @@ class User {
 $tom = new User("Tom");
 $tom->sayHi();
 
+class AdminUser extends User {
+	// override
+	public function sayHi() {
+		echo "Hi, I am $this->name and I am admin!<br>";
+	}
+
+	// final: not allowed to override
+	final public function sayHello() {
+		echo "Hello, I am $this->name!<br>";
+	}
+
+}
+$bob = new AdminUser("Bob");
+$bob->sayHi();
+$bob->sayHello();
+
 
 
 ?>
