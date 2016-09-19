@@ -134,12 +134,12 @@ for ($index = 0; $index < 10; $index++):
 endfor;
 
 //function
-function sayHi($name = "nanashi", $br) {
+function sayHi($br, $name = "nanashi") {
 	echo "hi! $name$br";
 }
-sayHi("Tom", $br);
-sayHi("Bob", $br);
-sayHi(, $br);
+sayHi($br, "Tom");
+sayHi($br, "Bob");
+sayHi($br);
 function add($num1, $num2) {
 	return $num1 + $num2;
 }
