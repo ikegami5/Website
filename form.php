@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 		<input type="submit" value="Check!" />
 	</form>
 	<p><?php if ($error) { echo "too long<br>"; } ?></p>
-	<h1>Link</h1>
+	<h2>Link</h2>
 	<a href="./index.html">TOP</a>
 </body>
 </html>

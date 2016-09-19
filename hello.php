@@ -280,7 +280,7 @@ div(4, 0);
 <body>
 	<h1>ここからhtml</h1>
 	<p>htmlに<?php echo "php" ?>を埋め込む</p>
-	<h1>Link</h1>
+	<h2>Link</h2>
 	<a href="./index.html">TOP</a>
 </body>
 </html>
