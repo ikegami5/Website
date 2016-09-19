@@ -230,6 +230,28 @@ class Dog extends Animal {
 $poti = new Dog("Poti");
 $poti->profile();
 
+//interface
+interface canMove {
+	public function move();
+}
+interface canSpeak {
+	public function speak();
+}
+class Human implements canSpeak, canMove {
+
+	public function move() {
+		echo "moving<br>";
+	}
+
+	public function speak() {
+		echo "speaking<br>";
+	}
+
+}
+$human = new Human();
+$human->move();
+$human->speak();
+
 
 
 ?>
