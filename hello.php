@@ -252,6 +252,21 @@ $human = new Human();
 $human->move();
 $human->speak();
 
+//外部file: require / include "file name"; で読み込み
+
+// exception
+function div($x, $y) {
+	try {
+		if ($b === 0) {
+			throw new Exception("Cannot divide by 0<br>");
+		}
+		echo "($a / $b)<br>";
+	} catch (Exception $e) {
+		echo $e->getMessage();
+	}
+}
+div(6, 3);
+div(4, 0);
 
 
 ?>
