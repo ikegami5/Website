@@ -133,6 +133,20 @@ for ($index = 0; $index < 10; $index++):
 	echo "$index ";
 endfor;
 
+//function
+function sayHi($name = "nanashi") {
+	echo "hi! $name$br";
+}
+sayHi("Tom");
+sayHi("Bob");
+sayHi();
+function add($num1, $num2) {
+	return $num1 + $num2;
+}
+$num = add(4, 7)
+echo $num.$br;
+
+
 
 
 ?>
