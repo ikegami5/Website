@@ -9,7 +9,7 @@ echo $message.$br;
 //演算
 $int1 = 1;
 $int2 = 2;
-$int3 = 3;
+$int3 =	3;	
 echo ($int1 + $int2).$br;
 
 //型を表示
@@ -273,8 +273,8 @@ div(4, 0);
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-	<title>PHP練習</title>
-	<meta charset="utf-8">
+	<title>PHP練習1</title>
+	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="./style.css" />
 </head>
 <body>
