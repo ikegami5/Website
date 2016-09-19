@@ -143,7 +143,7 @@ sayHi();
 function add($num1, $num2) {
 	return $num1 + $num2;
 }
-$num = add(4, 7)
+$num = add(4, 7);
 echo $num.$br;
 
 
