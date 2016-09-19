@@ -135,7 +135,7 @@ endfor;
 
 //function
 function sayHi($name = "nanashi") {
-	echo "hi! $name$br";
+	echo "hi! $name $br";
 }
 sayHi("Tom");
 sayHi("Bob");
