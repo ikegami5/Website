@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
 	<h1>Form Test</h1>
+	<p>9文字以上入れるとメッセージが出るよ(*´ω｀*)</p>
 	<form action="#" method="POST">
 		<input type="text" name="username" placeholder="user name" value="<?php echo htmlspecialchars($username, ENT_QUOTES, "utf-8"); ?>" />
 		<input type="submit" value="Check!" />
