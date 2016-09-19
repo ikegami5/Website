@@ -155,9 +155,9 @@ echo rand(1, 10).$br;
 printf("%.3f%s", $x, $br);
 
 $s1 = "hello";
-$s2 = "猫";
+$s2 = "おはよう";
 echo strlen($s1).$br;
-echo mb_strlen($s2).$br; //multi_byte
+echo strlen($s2).$br; //multi_byte
 printf("%s means %s%s", $s1, $s2, $br);
 
 $list = array(2, 4, 6, 8, 10);
