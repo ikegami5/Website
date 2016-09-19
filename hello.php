@@ -260,7 +260,7 @@ function div($x, $y) {
 		if ($b === 0) {
 			throw new Exception("Cannot divide by 0<br>");
 		}
-		echo "($a / $b)<br>";
+		echo ($a / $b)."<br>";
 	} catch (Exception $e) {
 		echo $e->getMessage();
 	}
