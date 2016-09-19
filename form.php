@@ -25,6 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	</form>
 	<p><?php if ($error) { echo "too long<br>"; } ?></p>
 	<h1>Link</h1>
-	<a href="./index.html"></a>
+	<a href="./index.html">TOP</a>
 </body>
 </html>
