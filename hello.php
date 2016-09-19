@@ -209,6 +209,26 @@ class Utility {
 Utility::message();
 echo User::$count.$br;
 
+// abstract class
+abstract class Animal {
+	public $name;
+
+	abstract public function profile();
+
+}
+class Dog extends Animal {
+
+	public function __construct($name) {
+		$this->name = $name;
+	}
+
+	public function profile() {
+		echo "Dog: $this->name<br>";
+	}
+
+}
+$poti = new Dog("Poti");
+$poti->profile();
 
 
 
