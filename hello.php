@@ -132,6 +132,7 @@ echo $br;
 for ($index = 0; $index < 10; $index++):
 	echo "$index ";
 endfor;
+echo $br;
 
 //function
 function sayHi($br, $name = "nanashi") {
@@ -145,6 +146,24 @@ function add($num1, $num2) {
 }
 $num = add(4, 7);
 echo $num.$br;
+
+$x = 5.6;
+echo ceil($x).$br;
+echo floor($x).$br;
+echo round($x).$br;
+echo rand(1, 10).$br;
+printf("%.3f%s", $x, $br);
+
+$s1 = "hello";
+$s2 = "おはよう";
+echo strlen($s1).$br;
+echo mb_strlen($s2).$br; //multi_byte
+printf("%s means %s%s", $s1, $s2, $br);
+
+$list = array(2, 4, 6, 8, 10);
+echo count($list).$br;
+echo implode(",", $list).$br;
+
 
 
 
