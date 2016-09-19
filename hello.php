@@ -278,6 +278,9 @@ div(4, 0);
 	<link rel="stylesheet" type="text/css" href="./style.css" />
 </head>
 <body>
+	<h1>ここからhtml</h1>
 	<p>htmlに<?php echo "php" ?>を埋め込む</p>
+	<h1>Link</h1>
+	<a href="./index.html"></a>
 </body>
 </html>
