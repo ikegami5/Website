@@ -167,9 +167,11 @@ echo implode(",", $list).$br;
 //class
 class User {
 	public $name;
+	public static $count = 0;
 
 	public function __construct($name) {
 		$this->name = $name;
+		self::$count++;
 	}
 
 	public function sayHi() {
@@ -195,6 +197,18 @@ class AdminUser extends User {
 $bob = new AdminUser("Bob");
 $bob->sayHi();
 $bob->sayHello();
+// protected: children and parent class can access
+// private: only that class can access
+class Utility {
+	
+	public static function message() {
+		echo "Hello!<br>";
+	}
+
+}
+Utility::message();
+echo User::count.$br;
+
 
 
 
