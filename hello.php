@@ -135,12 +135,12 @@ endfor;
 echo $br;
 
 //function
-function sayHi($br, $name = "nanashi") {
-	echo "hi! $name$br";
+function sayHi($name = "nanashi") {
+	echo "hi! $name<br>";
 }
-sayHi($br, "Tom");
-sayHi($br, "Bob");
-sayHi($br);
+sayHi("Tom");
+sayHi("Bob");
+sayHi();
 function add($num1, $num2) {
 	return $num1 + $num2;
 }
@@ -165,7 +165,20 @@ echo count($list).$br;
 echo implode(",", $list).$br;
 
 //class
+class User {
+	public $name;
 
+	public function __construct($name) {
+		$this->name = $name;
+	}
+
+	public function sayHi() {
+		echo "Hi, I am $this->name!<br>";
+	}
+
+}
+$tom = new User("Tom");
+$tom->sayHi();
 
 
 
