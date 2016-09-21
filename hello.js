@@ -38,5 +38,20 @@ if (score === 80) {
 if (score > 70 && score < 90) {
 	console.log("70 < score < 90");
 }
+if (!("" || 0 || NaN || null || undefined || false)) {
+	console.log("false");
+}
+if ("abc" && 1 && true) {
+	console.log("true");
+}
+var max = (x > y) ? x : y;
+console.log("3 or 10, bigger is " + max);
+
+
+
+
+
+
+
 
 
