@@ -20,9 +20,23 @@ console.log(x);
 
 //文字列
 var s = "\"string\"\n";
-console.log(s);
 var number = 1234;
 console.log("文字列" + s + number);
 
+// if
+var score = 80;
+if (score > 60) {
+	console.log("OK!");
+} else if (score > 40) {
+	console.log("soso");
+} else {
+	console.log("NG");
+}
+if (score === 80) {
+	console.log("score = " + score);
+}
+if (score > 70 && score < 90) {
+	console.log("70 < score < 90");
+}
 
 
