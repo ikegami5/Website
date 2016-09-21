@@ -47,7 +47,23 @@ if ("abc" && 1 && true) {
 var max = (x > y) ? x : y;
 console.log("3 or 10, bigger is " + max);
 
-
+// switch
+var signal = "red";
+switch (signal) {
+	case "red":
+		console.log("stop");
+		break;
+	case "green":
+	case "blue":
+		console.log("go");
+		break;
+	case "yellow":
+		console.log("caution");
+		break;
+	default:
+		console.log("wrong signal");
+		break;
+}
 
 
 
