@@ -18,4 +18,11 @@ x--;
 console.log("6 - 1 = ")
 console.log(x);
 
+//文字列
+var s = "\"string\"\n";
+console.log(s);
+var number = 1234;
+console.log("文字列" + s + number);
+
+
 
