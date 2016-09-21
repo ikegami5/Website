@@ -1,6 +1,6 @@
 <?php
 
-$br = "<br>";
+$br = "<br />";
 
 //変数
 $message = "Hello from PHP!";
@@ -136,7 +136,7 @@ echo $br;
 
 //function
 function sayHi($name = "nanashi") {
-	echo "hi! $name<br>";
+	echo "hi! $name<br />";
 }
 sayHi("Tom");
 sayHi("Bob");
@@ -175,7 +175,7 @@ class User {
 	}
 
 	public function sayHi() {
-		echo "Hi, I am $this->name!<br>";
+		echo "Hi, I am $this->name!<br />";
 	}
 
 }
@@ -185,12 +185,12 @@ $tom->sayHi();
 class AdminUser extends User {
 	// override
 	public function sayHi() {
-		echo "Hi, I am $this->name and I am admin!<br>";
+		echo "Hi, I am $this->name and I am admin!<br />";
 	}
 
 	// final: not allowed to override
 	final public function sayHello() {
-		echo "Hello, I am $this->name!<br>";
+		echo "Hello, I am $this->name!<br />";
 	}
 
 }
@@ -202,7 +202,7 @@ $bob->sayHello();
 class Utility {
 	
 	public static function message() {
-		echo "Hello!<br>";
+		echo "Hello!<br />";
 	}
 
 }
@@ -223,7 +223,7 @@ class Dog extends Animal {
 	}
 
 	public function profile() {
-		echo "Dog: $this->name<br>";
+		echo "Dog: $this->name<br />";
 	}
 
 }
@@ -240,11 +240,11 @@ interface canSpeak {
 class Human implements canSpeak, canMove {
 
 	public function move() {
-		echo "moving<br>";
+		echo "moving<br />";
 	}
 
 	public function speak() {
-		echo "speaking<br>";
+		echo "speaking<br />";
 	}
 
 }
@@ -258,9 +258,9 @@ $human->speak();
 function div($x, $y) {
 	try {
 		if ($y === 0) {
-			throw new Exception("Cannot divide by 0<br>");
+			throw new Exception("Cannot divide by 0<br />");
 		}
-		echo ($x / $y)."<br>";
+		echo ($x / $y)."<br />";
 	} catch (Exception $e) {
 		echo $e->getMessage();
 	}
