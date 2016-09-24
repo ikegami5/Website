@@ -107,9 +107,12 @@ if (bool) {
 var name = prompt("insert name", "default name");
 console.log(name);
 
-
-
-
+// function
+function hello(name) {
+	return "Hello, " + name;
+}
+var greet = hello("Tom");
+console.log(greet);
 
 
 
