@@ -130,18 +130,19 @@ console.log(add(3, 5));
 
 // timer
 var iInShow = 0;
-function show() {
-	iInShow++
-	console.log(iInShow);
-}
-var interval = setInterval(function() {
-	show();
-	if (iInShow > 4) {
-		clearInterval(interval);
-	}
-}, 1000);
-
-iInShow = 0;
+/*
+not recommended
+*/
+// function show() {
+// 	iInShow++
+// 	console.log(iInShow);
+// }
+// var interval = setInterval(function() {
+// 	show();
+// 	if (iInShow > 4) {
+// 		clearInterval(interval);
+// 	}
+// }, 1000);
 function show2() {
 	iInShow++;
 	console.log(iInShow);
