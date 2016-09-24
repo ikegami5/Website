@@ -136,7 +136,7 @@ function show() {
 }
 var interval = setInterval(function() {
 	show();
-	if (iInShow < 10) {
+	if (iInShow > 10) {
 		clearInterval(interval);
 	}
 }, 1000);
