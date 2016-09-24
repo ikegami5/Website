@@ -136,10 +136,29 @@ function show() {
 }
 var interval = setInterval(function() {
 	show();
-	if (iInShow > 10) {
+	if (iInShow > 4) {
 		clearInterval(interval);
 	}
 }, 1000);
+
+iInShow = 0;
+function show2() {
+	iInShow++;
+	console.log(iInShow);
+	var timeout = setTimeout(function() {
+		show2();
+	}, 1000);
+	if (iInShow > 4) {
+		clearTimeout(timeout);
+	}
+}
+show2();
+
+
+
+
+
+
 
 
 
