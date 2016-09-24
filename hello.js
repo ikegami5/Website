@@ -155,10 +155,16 @@ function show2() {
 }
 show2();
 
-
-
-
-
+// array
+var score = [100, 300, 500, "hoge"];
+console.log(score[0]);
+score[2] = 400;
+console.log(score);
+var matrix = [
+	[1, 2],
+	[3, 4]
+];
+console.log(matrix[0][1]);
 
 
 
