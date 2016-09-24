@@ -128,8 +128,18 @@ console.log(add(3, 5));
 	console.log(x + y);
 })();
 
-
-
+// timer
+var iInShow = 0;
+function show() {
+	iInShow++
+	console.log(iInShow);
+}
+var interval = setInterval(function() {
+	show();
+	if (iInShow < 10) {
+		clearInterval(interval);
+	}
+}, 1000);
 
 
 
