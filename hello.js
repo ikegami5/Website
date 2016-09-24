@@ -96,9 +96,16 @@ for (var i = 0; i < 10; i++) {
 	console.log(i);
 }
 
-
-
-
+// alert / confirm / prompt
+alert("alert");
+var bool = confirm("OK?");
+if (bool) {
+	console.log("OK");
+} else {
+	console.log("NG");
+}
+var name = prompt("insert name", "default name");
+console.log(name);
 
 
 
