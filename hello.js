@@ -108,10 +108,10 @@ var name = prompt("insert name", "default name");
 console.log(name);
 
 // function
-function hello(name) {
+function message(name) {
 	return "Hello, " + name;
 }
-var greet = hello("Tom");
+var greet = message("Tom");
 console.log(greet);
 
 
