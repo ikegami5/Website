@@ -77,15 +77,18 @@ do {
 } while (i > 0);
 
 // for
+console.log("for");
 for (var i = 0; i < 10; i++) {
 	console.log(i);
 }
+console.log("break");
 for (var i = 0; i < 10; i++) {
 	if (i === 5) {
 		break;
 	}
 	console.log(i);
 }
+console.log("continue");
 for (var i = 0; i < 10; i++) {
 	if (i === 5) {
 		continue;
