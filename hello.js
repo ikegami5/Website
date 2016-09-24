@@ -109,10 +109,15 @@ console.log(name);
 
 // function
 function message(name) {
-	return "Hello, " + name;
+	var msg = "Hello, " + name;
+	return msg;
 }
 var greet = message("Tom");
 console.log(greet);
+var add = function(x, y) {
+	return x + y;
+};
+console.log(var(3, 5));
 
 
 
