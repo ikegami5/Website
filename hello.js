@@ -117,7 +117,7 @@ console.log(greet);
 var add = function(x, y) {
 	return x + y;
 };
-console.log(var(3, 5));
+console.log(add(3, 5));
 
 
 
