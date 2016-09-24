@@ -98,12 +98,14 @@ for (var i = 0; i < 10; i++) {
 
 // alert / confirm / prompt
 alert("alert");
+
 var bool = confirm("OK?");
 if (bool) {
 	console.log("OK");
 } else {
 	console.log("NG");
 }
+
 var name = prompt("insert name", "default name");
 console.log(name);
 
@@ -114,12 +116,17 @@ function message(name) {
 }
 var greet = message("Tom");
 console.log(greet);
+
 var add = function(x, y) {
 	return x + y;
 };
 console.log(add(3, 5));
 
-
+(function() {
+	var x = 10;
+	var y = 20;
+	console.log(x + y);
+})();
 
 
 
