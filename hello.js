@@ -221,6 +221,10 @@ docMessage.textContent += " from DOM!";
 docMessage.style.color = "red";
 docMessage.className = "myStyle";
 
+var newMessageElement = document.createElement("p"),
+	newMessage = document.createTextNode("新しいメッセージ");
+document.body.h1.appendChild(newMessageElement).appendChild(newMessage);
+
 
 
 
