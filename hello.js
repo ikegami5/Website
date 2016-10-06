@@ -208,8 +208,10 @@ console.log(date.getFullYear());
 console.log(date.getMonth()); // 0 to 11
 console.log(date.getTime()); // mSeconds since 1970/1/1
 
-
-
+// DOM
+console.dir(window);
+console.log(window.outerHeight);
+window.location.href = "http://dotinstall.com"
 
 
 
