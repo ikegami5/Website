@@ -223,7 +223,8 @@ docMessage.className = "myStyle";
 
 var newMessageElement = document.createElement("p"),
 	newMessage = document.createTextNode("新しいメッセージ");
-document.h1.appendChild(newMessageElement).appendChild(newMessage);
+	div = document.getElementById("newMessage");
+document.div.appendChild(newMessageElement).appendChild(newMessage);
 
 
 
