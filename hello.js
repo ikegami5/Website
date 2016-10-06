@@ -166,6 +166,18 @@ var matrix = [
 ];
 console.log(matrix[0][1]);
 
+// object
+var user = {
+	name: "John",
+	score: 80
+};
+console.log(user["name"]);
+console.log(user.score);
+user.score = 100;
+console.log(user["score"]);
+
+
+
 
 
 
