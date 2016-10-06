@@ -195,7 +195,18 @@ console.log(arr);
 arr.splice(1, 2, 800, 1000);
 console.log(arr);
 
+// Math
+console.log(Math.PI);
+console.log(Math.ceil(5.3));
+console.log(Math.floor(5.3));
+console.log(Math.round(5.5));
+console.log(Math.random()); // 0 <= x < 1
 
+// Date
+var date = new Date();
+console.log(date.getFullYear());
+console.log(date.getMonth());
+console.log(date.getTime());
 
 
 
