@@ -222,12 +222,16 @@ docMessage.style.color = "red";
 docMessage.className = "myStyle";
 
 var newMessageElement = document.createElement("p"),
-	newMessage = document.createTextNode("新しいメッセージ");
+	newMessage = document.createTextNode("新しいメッセージ"),
 	div = document.getElementById("newMessage");
 div.appendChild(newMessageElement).appendChild(newMessage);
 
-
-
+var addMessageElement = document.createElement("p"),
+	addMessage = document.createTextNode("追加したメッセージ"),
+	button = document.getElementById("add");
+button.getEventListener("click", function() {
+	div.appendChild(addMessageElement).appendChild(addMessage);
+})
 
 
 
