@@ -213,6 +213,9 @@ console.dir(window);
 console.log(window.outerHeight);
 // 自動で別のリンクに飛ばす
 // window.location.href = "http://52.69.59.92"
+
+//window. は省略可
 console.log(window.document);
+
 
 
