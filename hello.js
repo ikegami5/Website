@@ -226,10 +226,10 @@ var newMessageElement = document.createElement("p"),
 	div = document.getElementById("newMessage");
 div.appendChild(newMessageElement).appendChild(newMessage);
 
-var addMessageElement = document.createElement("p"),
-	addMessage = document.createTextNode("追加したメッセージ"),
-	button = document.getElementById("add");
+var button = document.getElementById("add");
 button.addEventListener("click", function() {
+	var addMessageElement = document.createElement("p"),
+		addMessage = document.createTextNode("追加したメッセージ");
 	div.appendChild(addMessageElement).appendChild(addMessage);
 })
 
