@@ -229,7 +229,7 @@ div.appendChild(newMessageElement).appendChild(newMessage);
 var addMessageElement = document.createElement("p"),
 	addMessage = document.createTextNode("追加したメッセージ"),
 	button = document.getElementById("add");
-button.getEventListener("click", function() {
+button.addEventListener("click", function() {
 	div.appendChild(addMessageElement).appendChild(addMessage);
 })
 
