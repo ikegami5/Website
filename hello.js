@@ -181,10 +181,23 @@ console.log(user["score"]);
 user.greet("Tom");
 
 // String
-var str = new String("hello");
+var str = new String("hello"); // is the same meaning to: var str = "hello";
 console.log(str.length);
 console.log(str.replace("h", "H"));
 console.log(str.substr(1, 3));
+
+// Array
+
+var arr = new Array(100, 300, 200); // is the same meaning to: var arr = [100, 300, 200];
+console.log(arr.length);
+arr.push(500);
+console.log(arr);
+arr.splice(1, 2, 800, 1000);
+console.log(arr);
+
+
+
+
 
 
 
