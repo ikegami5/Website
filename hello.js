@@ -182,9 +182,9 @@ user.greet("Tom");
 
 // String
 var str = new String("hello");
-console.log(s.length());
-console.log(s.replace("h", "H"));
-console.log(s.substr(1, 3));
+console.log(str.length());
+console.log(str.replace("h", "H"));
+console.log(str.substr(1, 3));
 
 
 
