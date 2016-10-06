@@ -218,6 +218,8 @@ console.log(window.outerHeight);
 console.log(window.document);
 var docMessage = document.getElementById("message");
 docMessage.textContent += " from DOM!";
+docMessage.style.color = "red";
+docMessage.className = "myStyle";
 
 
 
