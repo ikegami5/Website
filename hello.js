@@ -233,8 +233,3 @@ button.addEventListener("click", function() {
 	div.appendChild(addMessageElement).appendChild(addMessage);
 })
 
-
-
-
-
-
