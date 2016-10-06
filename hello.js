@@ -211,7 +211,8 @@ console.log(date.getTime()); // mSeconds since 1970/1/1
 // DOM
 console.dir(window);
 console.log(window.outerHeight);
-window.location.href = "http://dotinstall.com"
+// 自動で別のリンクに飛ばす
+window.location.href = "52.69.59.92"
 
 
 
