@@ -205,8 +205,8 @@ console.log(Math.random()); // 0 <= x < 1
 // Date
 var date = new Date();
 console.log(date.getFullYear());
-console.log(date.getMonth());
-console.log(date.getTime());
+console.log(date.getMonth()); // 0 to 11
+console.log(date.getTime()); // mSeconds since 1970/1/1
 
 
 
