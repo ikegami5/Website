@@ -212,7 +212,7 @@ console.log(date.getTime()); // mSeconds since 1970/1/1
 console.dir(window);
 console.log(window.outerHeight);
 // 自動で別のリンクに飛ばす
-window.location.href = "http://52.69.59.92"
+// window.location.href = "http://52.69.59.92"
 
 
 
