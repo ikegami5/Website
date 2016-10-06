@@ -169,12 +169,16 @@ console.log(matrix[0][1]);
 // object
 var user = {
 	name: "John",
-	score: 80
+	score: 80,
+	greet: function(person) {
+		console.log("Hello, " + person + " from " + this.name);
+	}
 };
 console.log(user["name"]);
 console.log(user.score);
 user.score = 100;
 console.log(user["score"]);
+user.greet("Tom");
 
 
 
