@@ -3,9 +3,14 @@
 import sys
 
 def main():
-	print("Hello, Python!")
+	br = "</br>"
+	print("Content-type: text/html\n")
+	html = "<html><body>{0}</body></html>"
+	body = "Hello, Python!" + br
 	version = list(sys.version_info)[0:3]
-	print("version: {0[0]}.{0[1]}.{0[2]}".format(version))
+	body += "version: {0[0]}.{0[1]}.{0[2]}".format(version)
+	body += br
+	print(html.format(body))
 
 if __name__ == "__main__":
 	main()
