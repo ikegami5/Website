@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
 	<meta charset="utf-8" />
 	<title>PHP練習2</title>
-	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
 <body>
 	<h1>Form Test</h1>
@@ -26,6 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	</form>
 	<p><?php if ($error) { echo "too long<br />"; } ?></p>
 	<h2>Link</h2>
-	<a href="./index.html">TOP</a>
+	<a href="/index.html">TOP</a>
 </body>
 </html>

@@ -275,12 +275,12 @@ div(4, 0);
 <head>
 	<title>PHP練習1</title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
 <body>
 	<h1>ここからhtml</h1>
 	<p>htmlに<?php echo "php" ?>を埋め込む</p>
 	<h2>Link</h2>
-	<a href="./index.html">TOP</a>
+	<a href="/index.html">TOP</a>
 </body>
 </html>
