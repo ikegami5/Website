@@ -4,7 +4,7 @@ import sys
 
 import io
 
-def main():
+def main(debug):
 	br = "</br>"
 	print("Content-type: text/html\n")
 	html = """
@@ -18,6 +18,7 @@ def main():
 		<body>
 			<h1>Python練習1</h1>
 			<p>{0}</p>
+			<p>{1}</p>
 			<h2>Link</h2>
 			<a href="/index.html">TOP</a>
 		</body>
@@ -27,12 +28,12 @@ def main():
 	version = list(sys.version_info)[0:3]
 	body += "version: {0[0]}.{0[1]}.{0[2]}".format(version)
 	body += br
-	print(html.format(body))
+	print(html.format(body, debug))
 
 if __name__ == "__main__":
 
-	print(sys.stdout.encoding)
+	debug = sys.stdout.encoding
 	sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
-	main()
+	main(debug)
 
