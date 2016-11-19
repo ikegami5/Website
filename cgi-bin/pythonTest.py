@@ -11,11 +11,11 @@ def main():
 		<head>
 			<meta charset="UTF-8" />
 			<title>Python練習1</title>
-			<link rel="stylesheet" type="text/css" href="./style.css" />
+			<!-- <link rel="stylesheet" type="text/css" href="./style.css" /> -->
 		</head>
 		<body>
 			<h1>Python練習1</h1>
-			{0}
+			<p>{0}</p>
 			<h2>Link</h2>
 			<a href="./index.html">TOP</a>
 		</body>
