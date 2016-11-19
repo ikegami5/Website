@@ -2,11 +2,14 @@
 # coding: utf-8
 import sys
 
+import io
+
+
 def main():
 	br = "</br>"
 	print("Content-type: text/html\n")
 	html = """
-		<!-- <!DOCTYPE html>
+		<!DOCTYPE html>
 		<html lang="ja">
 		<head>
 			<meta charset="UTF-8" />
@@ -19,7 +22,7 @@ def main():
 			<h2>Link</h2>
 			<a href="./index.html">TOP</a>
 		</body>
-		</html> -->
+		</html>
 	"""
 	body = "Hello, Python!" + br
 	version = list(sys.version_info)[0:3]
@@ -28,5 +31,8 @@ def main():
 	print(html.format(body))
 
 if __name__ == "__main__":
+
+	sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+
 	main()
 
