@@ -13,7 +13,7 @@ def main():
 		<head>
 			<meta charset="UTF-8" />
 			<title>Python練習1</title>
-			<link rel="stylesheet" type="text/css" href="../html/style.css" />
+			<link rel="stylesheet" type="text/css" href="/style.css" />
 		</head>
 		<body>
 			<h1>Python練習1</h1>
