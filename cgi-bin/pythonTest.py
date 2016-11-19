@@ -6,12 +6,12 @@ def main():
 	br = "</br>"
 	print("Content-type: text/html\n")
 	html = """
-		<!DOCTYPE html>
+		<!-- <!DOCTYPE html>
 		<html lang="ja">
 		<head>
 			<meta charset="UTF-8" />
 			<title>Python練習1</title>
-			<!-- <link rel="stylesheet" type="text/css" href="./style.css" /> -->
+			<link rel="stylesheet" type="text/css" href="./style.css" />
 		</head>
 		<body>
 			<h1>Python練習1</h1>
@@ -19,7 +19,7 @@ def main():
 			<h2>Link</h2>
 			<a href="./index.html">TOP</a>
 		</body>
-		</html>
+		</html> -->
 	"""
 	body = "Hello, Python!" + br
 	version = list(sys.version_info)[0:3]
