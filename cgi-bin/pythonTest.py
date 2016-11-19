@@ -19,7 +19,7 @@ def main():
 			<h1>Python練習1</h1>
 			<p>{0}</p>
 			<h2>Link</h2>
-			<a href="../html/index.html">TOP</a>
+			<a href="/index.html">TOP</a>
 		</body>
 		</html>
 	"""
