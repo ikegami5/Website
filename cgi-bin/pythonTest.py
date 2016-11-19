@@ -20,7 +20,7 @@ def main():
 			<p>{0}</p>
 			<p>{1}</p>
 			<h2>Link</h2>
-			<a href="./index.html">TOP</a>
+			<a href="../html/index.html">TOP</a>
 		</body>
 		</html>
 	"""
