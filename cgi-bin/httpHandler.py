@@ -21,7 +21,7 @@ class Response(object):
 		"""
 		self.title = title
 		self.body = body
-		self.html = self.html.format(title=self.title, body=self.body)
+		self.html = self.html.format(title = self.title, body = self.body)
 
 	def respond(self):
 		print("Content-type: text/html\n")
