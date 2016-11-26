@@ -4,7 +4,7 @@ from httpHandler import Response
 
 def main():
 	title = "title"
-	body = "Test!"
+	body = "Test"
 	res = Response(title, body)
 	res.respond()
 
