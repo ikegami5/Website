@@ -1,32 +1,17 @@
 #!/usr/local/bin/python3
 # coding: utf-8
 import sys
+from httpHandler import Response
 
 def main():
 	br = "</br>"
-	print("Content-type: text/html\n")
-	html = """
-		<!DOCTYPE html>
-		<html lang="ja">
-		<head>
-			<meta charset="UTF-8" />
-			<title>Python練習1</title>
-			<link rel="stylesheet" type="text/css" href="/style.css" />
-		</head>
-		<body>
-			<h1>Python練習1</h1>
-			<p>{0}</p>
-			<h2>Link</h2>
-			<a href="/index.html">TOP</a>
-		</body>
-		</html>
-	"""
+	title = "Python練習1"
 	body = "Hello, Python!" + br
 	version = list(sys.version_info)[0:3]
 	body += "version: {0[0]}.{0[1]}.{0[2]}".format(version)
 	body += br
-	print(html.format(body))
+	response = Response(title, body)
+	response.respond()
 
 if __name__ == "__main__":
 	main()
-
