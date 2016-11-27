@@ -16,7 +16,7 @@ def main():
 		body += """
 			Your name: {name} {br}
 			Your password: {password} {br}
-		""".format(name = data[name].value, password = data[password].value, br = br)
+		""".format(name = data["name"].value, password = data["password"].value, br = br)
 	res = Response(title, body)
 	res.respond()
 
