@@ -8,11 +8,11 @@ def main():
 	errorMessage = ""
 	br = "<br />"
 	if error == "true":
-		errorMessage += "Input your name and password." + br
+		errorMessage += '<div class="error">Input your name and password.</div>' + br
 	title = "Log in"
 	body = """
 		Post test{br}
-		{errorMessage} {br}
+		{errorMessage}
 		<form method="post" action="/cgi-bin/link.py">
 			Name: <input type="text" name="name" />{br}
 			Password: <input type="password" name="password" />{br}
