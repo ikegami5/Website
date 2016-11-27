@@ -1,5 +1,6 @@
 #!/usr/local/bin/python3
 # coding: utf-8
+import cgi
 
 class Response(object):
 	def __init__(self, title, body):
@@ -26,3 +27,8 @@ class Response(object):
 	def respond(self):
 		print("Content-type: text/html\n")
 		print(self.html)
+
+class Request(object):
+	def __init__(self):
+		self.data = cgi.FieldStorage()
+		
