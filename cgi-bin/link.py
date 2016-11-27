@@ -9,7 +9,7 @@ def main():
 	body = """
 		Your data:
 	""" + br
-	body + "\t" + sys.stdin.read() + br
+	body += "\t" + sys.stdin.read() + br
 	res = Response(title, body)
 	res.respond()
 
