@@ -9,9 +9,9 @@ def main():
 	br = "<br />"
 	body = ""
 	if "name" not in data:
-		pass
+		print("Location: /cgi-bin/mathQuiz.py?error=true")
 	elif "password" not in data:
-		pass
+		print("Location: /cgi-bin/mathQuiz.py?error=true")
 	else:
 		body += """
 			Your name: {name} {br}

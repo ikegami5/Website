@@ -1,18 +1,24 @@
 #!/usr/local/bin/python3
 # coding: utf-8
-from httpHandler import Response
+from httpHandler import Response, Request
 
 def main():
-	title = "Log in"
+	request = Request()
+	error = request.data["error"].value
+	errorMessage = ""
 	br = "<br />"
+	if error == "true":
+		errorMessage += "Input your name and password." + br
+	title = "Log in"
 	body = """
 		Post test{br}
+		{errorMessage} {br}
 		<form method="post" action="/cgi-bin/link.py">
 			Name: <input type="text" name="name" />{br}
 			Password: <input type="password" name="password" />{br}
 			<input type="submit" name="submit" value="Log in" />{br}
 		</form>
-	""".format(br = br)
+	""".format(errorMessage = errorMessage, br = br)
 	res = Response(title, body)
 	res.respond()
 
