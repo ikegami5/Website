@@ -1,5 +1,5 @@
 body {
-	background-color: lightgrey;
+	background-color: white;
 }
 
 h1 {
@@ -28,4 +28,5 @@ ul li {
 
 div.indent {
 	margin-left: 4em;
+	color: red;
 }
