@@ -26,7 +26,6 @@ ul li {
 	border: 1px solid gray;
 }
 
-div#indent {
+div.indent {
 	margin-left: 4em;
-	color: red;
 }
