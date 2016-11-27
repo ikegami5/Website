@@ -1,18 +1,15 @@
 #!/usr/local/bin/python3
 # coding: utf-8
 from httpHandler import Response
+import sys
 
 def main():
-	title = "title"
+	title = "Log in success!"
 	br = "<br />"
 	body = """
-		Data
+		Your data:
 	""" + br
-	while True:
-		try:
-			body + input() + br
-		except EOFError:
-			break
+	body + "\t" + sys.stdin.read() + br
 	res = Response(title, body)
 	res.respond()
 

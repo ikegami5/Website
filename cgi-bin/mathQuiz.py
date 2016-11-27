@@ -10,7 +10,7 @@ def main():
 		<form method="post" action="/cgi-bin/link.py">
 			Name: <input type="text" name="name" />{br}
 			Password: <input type="password" name="password" />{br}
-			<input type="submit" name="submit" value="log in" />{br}
+			<input type="submit" name="submit" value="Log in" />{br}
 		</form>
 	""".format(br = br)
 	res = Response(title, body)
