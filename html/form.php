@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 		<input type="text" name="username" placeholder="user name" value="<?php echo htmlspecialchars($username, ENT_QUOTES, "utf-8"); ?>" />
 		<input type="submit" value="Check!" />
 	</form>
-	<p><?php if ($error) { echo "<div class=\"error\">too long</div><br />"; } ?></p>
+	<p><?php if ($error) { echo "<div class=\"error\">too long</div>"; } ?></p>
 	<h2>Link</h2>
 	<a href="/index.html">TOP</a>
 </body>
