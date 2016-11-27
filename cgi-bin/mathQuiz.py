@@ -4,13 +4,15 @@ from httpHandler import Response
 
 def main():
 	title = "Log in"
+	br = "<br />"
 	body = """
-		Post test<br>
+		Post test{br}
 		<form method="post" action="/cgi-bin/link.py">
-			Name: <input type="text" name="name" />
-			Password: <input type="password" name="password" />
+			Name: <input type="text" name="name" />{br}
+			Password: <input type="password" name="password" />{br}
+			<input type="submit" name="log in" />{br}
 		</form>
-	"""
+	""".format(br = br)
 	res = Response(title, body)
 	res.respond()
 
