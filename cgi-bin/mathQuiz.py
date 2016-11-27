@@ -3,10 +3,13 @@
 from httpHandler import Response
 
 def main():
-	title = "title"
+	title = "Log in"
 	body = """
-		Link test<br>
-		<a href="/cgi-bin/link.py">Link</a>
+		Post test<br>
+		<form method="post" action="/cgi-bin/link.py">
+			Name: <input type="text" name="name" />
+			Password: <input type="password" name="password" />
+		</form>
 	"""
 	res = Response(title, body)
 	res.respond()

@@ -4,9 +4,15 @@ from httpHandler import Response
 
 def main():
 	title = "title"
+	br = "<br />"
 	body = """
-		Link<br>
-	"""
+		Data
+	""" + br
+	while True:
+		try:
+			body + input() + br
+		except EOFError:
+			break
 	res = Response(title, body)
 	res.respond()
 
