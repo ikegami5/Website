@@ -9,7 +9,7 @@ def main():
 	body = """
 		Your data:
 	""" + br
-	body += "    " + sys.stdin.read() + br
+	body += "<div id=indent>" + sys.stdin.read() + br + "<div />"
 	res = Response(title, body)
 	res.respond()
 
