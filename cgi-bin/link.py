@@ -1,6 +1,7 @@
 #!/usr/local/bin/python3
 # coding: utf-8
 from httpHandler import Response, Request
+from dbPass import dbName, dbPass
 
 def main():
 	request = Request()
@@ -17,6 +18,7 @@ def main():
 			Your name: {name} {br}
 			Your password: {password} {br}
 		""".format(name = data["name"].value, password = data["password"].value, br = br)
+		body += dbName + ": " + dbPass + br
 		res = Response(title, body)
 		res.respond()
 
