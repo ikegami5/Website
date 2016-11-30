@@ -33,7 +33,7 @@ def main():
 			Your password: {password} {br}
 		""".format(name = data["name"].value, password = data["password"].value, br = br)
 
-		body += dbdata + br
+		body += dbData + br
 
 		res = Response(title, body)
 		res.respond()
