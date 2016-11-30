@@ -3,7 +3,7 @@
 from httpHandler import Response, Request
 import MySQLdb
 from dbPass import dbName, dbPass
-from htmlTemplete import DBExpression
+from htmlTemplate import DBExpression
 
 def main():
 	dbConnector = MySQLdb.connect(
