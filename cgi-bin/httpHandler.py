@@ -31,4 +31,3 @@ class Response(object):
 class Request(object):
 	def __init__(self):
 		self.data = cgi.FieldStorage()
-		

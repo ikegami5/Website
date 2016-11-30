@@ -3,6 +3,7 @@
 from httpHandler import Response, Request
 import MySQLdb
 from dbPass import dbName, dbPass
+from htmlTemplete import DBExpression
 
 def main():
 	dbConnector = MySQLdb.connect(
@@ -23,17 +24,17 @@ def main():
 	elif "password" not in data:
 		print("Location: /cgi-bin/mathQuiz.py?error=true\n")
 	else:
-		dbData = ""
+		dbData = DBExpression("Name", "Password")
 		dbCursor.execute("SELECT * FROM users")
 		for row in dbCursor.fetchall():
-			dbData += str(row)
+			dbData.appendData(*row)
 
 		body += """
 			Your name: {name} {br}
 			Your password: {password} {br}
 		""".format(name = data["name"].value, password = data["password"].value, br = br)
 
-		body += dbData + br
+		body += str(dbData) + br
 
 		res = Response(title, body)
 		res.respond()
