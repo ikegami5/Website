@@ -24,22 +24,27 @@ def main():
 	elif "password" not in data:
 		print("Location: /cgi-bin/mathQuiz.py?error=noPass\n")
 	else:
-		dbData = DBExpression("Name", "Password")
-		dbCursor.execute("SELECT * FROM users")
-		for row in dbCursor.fetchall():
-			dbData.appendData(*row)
+		name = data["name"].value
+		password = data["password"].value
+		dbCursor.execute('SELECT * FROM users WHERE name = "{name}"'.format(name = name))
 
-		body += """
-			Your name: {name} {br}
-			Your password: {password} {br}
-		""".format(name = data["name"].value, password = data["password"].value, br = br)
+		body += str(dbCursor.fetchall());
 
-		body += str(dbData) + br
+		if (True):
 
+			body += """
+				Your name: {name} {br}
+				Your password: {password} {br}
+			""".format(name = name, password = password, br = br)
 
+			dbData = DBExpression("Name", "Password")
+			dbCursor.execute("SELECT * FROM users")
+			for row in dbCursor.fetchall():
+				dbData.appendData(*row)
+			body += str(dbData) + br
 
-		res = Response(title, body)
-		res.respond()
+			res = Response(title, body)
+			res.respond()
 
 	dbCursor.close()
 	dbConnector.close()
