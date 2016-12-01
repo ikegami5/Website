@@ -11,6 +11,8 @@ def main():
 		errorMessage += '<div class="error">Input your name.</div>' + br
 	elif error == "noPass":
 		errorMessage += '<div class="error">Input your password.</div>' + br
+	elif error == "alreadyExist":
+		errorMessage += '<div class="error">That name already exists.</div>' + br
 	title = "Log in"
 	body = """
 		Post test{br}

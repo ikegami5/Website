@@ -28,10 +28,9 @@ def main():
 		password = data["password"].value
 		dbCursor.execute('SELECT * FROM users WHERE name = "{name}"'.format(name = name))
 
-		body += str(dbCursor.fetchall());
-
-		if (True):
-
+		if dbCursor.fetchall() != ():
+			print("Location: /cgi-bin/mathQuiz.py?error=alreadyExist\n")
+		else:
 			body += """
 				Your name: {name} {br}
 				Your password: {password} {br}
