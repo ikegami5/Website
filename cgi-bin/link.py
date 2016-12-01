@@ -20,9 +20,9 @@ def main():
 	br = "<br />"
 	body = ""
 	if "name" not in data:
-		print("Location: /cgi-bin/mathQuiz.py?error=true\n")
+		print("Location: /cgi-bin/mathQuiz.py?error=noName\n")
 	elif "password" not in data:
-		print("Location: /cgi-bin/mathQuiz.py?error=true\n")
+		print("Location: /cgi-bin/mathQuiz.py?error=noPass\n")
 	else:
 		dbData = DBExpression("Name", "Password")
 		dbCursor.execute("SELECT * FROM users")
@@ -36,11 +36,13 @@ def main():
 
 		body += str(dbData) + br
 
+
+
 		res = Response(title, body)
 		res.respond()
 
-	dbCursor.close
-	dbConnector.close
+	dbCursor.close()
+	dbConnector.close()
 
 if __name__ == "__main__":
 	main()

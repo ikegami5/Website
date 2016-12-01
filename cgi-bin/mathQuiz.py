@@ -7,8 +7,10 @@ def main():
 	error = request.data["error"].value
 	errorMessage = ""
 	br = "<br />"
-	if error == "true":
-		errorMessage += '<div class="error">Input your name and password.</div>' + br
+	if error == "noName":
+		errorMessage += '<div class="error">Input your name.</div>' + br
+	elif error == "noPass":
+		errorMessage += '<div class="error">Input your password.</div>' + br
 	title = "Log in"
 	body = """
 		Post test{br}
