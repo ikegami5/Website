@@ -36,6 +36,11 @@ def main():
 				Your password: {password} {br}
 			""".format(name = name, password = password, br = br)
 
+			dbCursor.execute("""
+				INSERT INTO users 
+				VALUES ("{name}", "{password}")
+			""".format(name = name, password = password))
+
 			dbData = DBExpression("Name", "Password")
 			dbCursor.execute("SELECT * FROM users")
 			for row in dbCursor.fetchall():
