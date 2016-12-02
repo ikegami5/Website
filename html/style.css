@@ -55,3 +55,7 @@ table td {
 	vertical-align: top;
 	border: 1px solid gray;
 }
+
+button {
+	padding: 15px 40px;
+}

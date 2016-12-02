@@ -19,7 +19,7 @@ def main():
 		<form method="post" action="/cgi-bin/link.py">
 			Name: <input type="text" name="name" />{br}
 			Password: <input type="password" name="password" />{br}
-			<input type="submit" name="submit" value="Log in" />{br}
+			<button type="submit" name="submit" value="signUp">Sign up</button>{br}
 		</form>
 	""".format(errorMessage = errorMessage, br = br)
 	res = Response(title, body)
