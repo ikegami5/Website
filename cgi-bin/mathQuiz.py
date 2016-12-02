@@ -13,6 +13,8 @@ def main():
 			<button type="button" value="Sign in" />
 		</form>
 	"""
+	res = Response(title, body)
+	res.respond()
 
 if __name__ == '__main__':
 	main()
