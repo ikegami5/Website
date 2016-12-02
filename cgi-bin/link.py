@@ -36,6 +36,7 @@ def main():
 				INSERT INTO users 
 				VALUES ("{name}", "{password}")
 			""".format(name = name, password = password))
+			dbConnector.commit()
 
 			dbData = DBExpression("Name", "Password")
 			dbCursor.execute("SELECT * FROM users")
