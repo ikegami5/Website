@@ -19,23 +19,19 @@ def main():
 	title = "Log in success!"
 	br = "<br />"
 	body = ""
+	errorLoc = "Location: /cgi-bin/signUp.py?error={error}\n"
 	if "name" not in data:
-		print("Location: /cgi-bin/mathQuiz.py?error=noName\n")
+		print(errorLoc.format(error = "noName"))
 	elif "password" not in data:
-		print("Location: /cgi-bin/mathQuiz.py?error=noPass\n")
+		print(errorLoc.format(error = "noPass"))
 	else:
 		name = data["name"].value
 		password = data["password"].value
 		dbCursor.execute('SELECT * FROM users WHERE name = "{name}"'.format(name = name))
 
 		if dbCursor.fetchall() != ():
-			print("Location: /cgi-bin/mathQuiz.py?error=alreadyExist\n")
+			print(errorLoc.format(error = "alreadyExist"))
 		else:
-			body += """
-				Your name: {name} {br}
-				Your password: {password} {br}
-			""".format(name = name, password = password, br = br)
-
 			dbCursor.execute("""
 				INSERT INTO users 
 				VALUES ("{name}", "{password}")
