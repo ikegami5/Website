@@ -6,10 +6,10 @@ def main():
 	br = "<br />"
 	title = "Math Quiz"
 	body = """
-		<form method="get" action="/cgi-bin/signUp.py?error=none>
-			<button type="submit" value="signUp" name="action">Sign up</button>
-		</form>
-		<form method="get" action="/cgi-bin/signIn.py?error=none>
+		<button type="button" onclick="location.href='/cgi-bin/signIn.py?error=none'">
+			Sign up
+		</button>
+		<form method="get" action="/cgi-bin/signIn.py?error=none">
 			<button type="submit" value="signIn" name="action">Sign in</button>
 		</form>
 	"""
