@@ -57,5 +57,6 @@ table td {
 }
 
 button {
-	padding: 15px 40px;
+	font-size: 1em;
+	padding: 10px 40px;
 }
