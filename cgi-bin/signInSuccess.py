@@ -36,16 +36,17 @@ def main():
 		elif len(users) >= 2:
 			raise DBError()
 		else:
-			body += str(users)
+			if users[0][1] != password:
+				print(errorLoc.format(error = "wrongPass"))
+			else:
+				dbData = DBExpression("Name", "Password")
+				dbCursor.execute("SELECT * FROM users")
+				for row in dbCursor.fetchall():
+					dbData.appendData(*row)
+				body += str(dbData) + br
 
-			dbData = DBExpression("Name", "Password")
-			dbCursor.execute("SELECT * FROM users")
-			for row in dbCursor.fetchall():
-				dbData.appendData(*row)
-			body += str(dbData) + br
-
-			res = Response(title, body)
-			res.respond()
+				res = Response(title, body)
+				res.respond()
 
 	dbCursor.close()
 	dbConnector.close()
