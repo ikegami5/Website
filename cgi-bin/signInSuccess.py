@@ -33,7 +33,7 @@ def main():
 
 		if users == ():
 			print(errorLoc.format(error = "doNotExist"))
-		elif users.len() >= 2:
+		elif len(users) >= 2:
 			raise DBError()
 		else:
 			body += str(users)
