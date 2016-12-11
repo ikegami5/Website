@@ -34,6 +34,14 @@ ul li {
 	color: red;
 }
 
+.caution {
+	color: orange;
+}
+
+.thick {
+	font-weight: bold;
+}
+
 table {
 	border-collapse: collapse;
 	text-align: left;

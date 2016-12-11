@@ -15,6 +15,11 @@ def main():
 		errorMessage += '<div class="error">That name already exists.</div>' + br
 	title = "Sign Up"
 	body = """
+		<div class="caution">
+			<div class="thick">注意!</div> <br />
+			セキュリティがガバガバなので、他のサイトで使用しているパスワードは<br />
+			絶対に入力しないでください！
+		</div>
 		{errorMessage}
 		<form method="post" action="/cgi-bin/link.py">
 			Name: <input type="text" name="name" />{br}
