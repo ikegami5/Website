@@ -18,7 +18,7 @@ def main():
 		<div class="caution">
 			<div class="thick">注意!</div> <br />
 			セキュリティがガバガバなので、他のサイトで使用しているパスワードは<br />
-			絶対に入力しないでください！
+			絶対に入力しないでください！<br />
 		</div>
 		{errorMessage}
 		<form method="post" action="/cgi-bin/link.py">
