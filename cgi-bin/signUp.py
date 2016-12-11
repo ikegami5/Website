@@ -16,9 +16,9 @@ def main():
 	title = "Sign Up"
 	body = """
 		<div class="caution">
-			<div class="thick">注意!</div> <br />
+			<div class="thick">注意!</div>
 			セキュリティがガバガバなので、他のサイトで使用しているパスワードは<br />
-			絶対に入力しないでください！<br />
+			絶対に入力しないでください！
 		</div>
 		{errorMessage}
 		<form method="post" action="/cgi-bin/link.py">
