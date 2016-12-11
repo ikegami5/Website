@@ -21,7 +21,7 @@ def main():
 			絶対に入力しないでください！
 		</div>
 		{errorMessage}
-		<form method="post" action="/cgi-bin/link.py">
+		<form method="post" action="/cgi-bin/signUpSuccess.py">
 			Name: <input type="text" name="name" />{br}
 			Password: <input type="password" name="password" />{br}
 			<button type="submit" name="submit" value="signUp">Sign up</button>{br}
