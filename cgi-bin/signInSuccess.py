@@ -19,7 +19,11 @@ def main():
 	data = request.data
 	title = "Sign in success!"
 	br = "<br />"
-	body = ""
+	body = """
+		<button type="button" onclick="location.href='/cgi-bin/question.py'">
+			Start!
+		</button>
+	"""
 	errorLoc = "Location: /cgi-bin/signIn.py?error={error}\n"
 	if "name" not in data:
 		print(errorLoc.format(error = "noName"))
@@ -39,7 +43,7 @@ def main():
 			if users[0][1] != password:
 				print(errorLoc.format(error = "wrongPass"))
 			else:
-				dbData = DBExpression("Name", "Password")
+				dbData = DBExpression("Name")
 				dbCursor.execute("SELECT * FROM users")
 				for row in dbCursor.fetchall():
 					dbData.appendData(*row)

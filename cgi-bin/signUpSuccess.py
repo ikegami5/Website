@@ -18,7 +18,11 @@ def main():
 	data = request.data
 	title = "Log in success!"
 	br = "<br />"
-	body = ""
+	body = """
+		<button type="button" onclick="location.href='/cgi-bin/question.py'">
+			Start!
+		</button>
+	"""
 	errorLoc = "Location: /cgi-bin/signUp.py?error={error}\n"
 	if "name" not in data:
 		print(errorLoc.format(error = "noName"))
@@ -38,7 +42,7 @@ def main():
 			""".format(name = name, password = password))
 			dbConnector.commit()
 
-			dbData = DBExpression("Name", "Password")
+			dbData = DBExpression("Name")
 			dbCursor.execute("SELECT * FROM users")
 			for row in dbCursor.fetchall():
 				dbData.appendData(*row)
