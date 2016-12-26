@@ -46,7 +46,7 @@ def main():
 				dbData = DBExpression("Name")
 				dbCursor.execute("SELECT * FROM users")
 				for row in dbCursor.fetchall():
-					dbData.appendData(*row)
+					dbData.appendData(row[0])
 				body += str(dbData) + br
 
 				res = Response(title, body)
