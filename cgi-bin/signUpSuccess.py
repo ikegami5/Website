@@ -38,7 +38,7 @@ def main():
 		else:
 			dbCursor.execute("""
 				INSERT INTO users 
-				VALUES ("{name}", "{password}")
+				VALUES ("{name}", "{password}", 0)
 			""".format(name = name, password = password))
 			dbConnector.commit()
 
