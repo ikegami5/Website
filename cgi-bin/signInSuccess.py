@@ -43,10 +43,10 @@ def main():
 			if users[0][1] != password:
 				print(errorLoc.format(error = "wrongPass"))
 			else:
-				dbData = DBExpression("Name")
+				dbData = DBExpression("Name", "Score")
 				dbCursor.execute("SELECT * FROM users")
 				for row in dbCursor.fetchall():
-					dbData.appendData(row[0])
+					dbData.appendData(row[0], row[2])
 				body += str(dbData) + br
 
 				res = Response(title, body)

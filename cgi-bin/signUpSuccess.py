@@ -42,10 +42,10 @@ def main():
 			""".format(name = name, password = password))
 			dbConnector.commit()
 
-			dbData = DBExpression("Name")
+			dbData = DBExpression("Name", "Score")
 			dbCursor.execute("SELECT * FROM users")
 			for row in dbCursor.fetchall():
-				dbData.appendData(*row)
+				dbData.appendData(row[0], row[2])
 			body += str(dbData) + br
 
 			res = Response(title, body)
