@@ -38,7 +38,7 @@ def main():
 	body = """
 		score = {score}{br}
 	""".format(br = br, score = score)
-	body += str(dbData) + br + name
+	body += str(dbData) + br
 	res = Response(title, body)
 	res.respond()
 

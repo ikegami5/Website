@@ -49,7 +49,7 @@ def main():
 						<button type="submit">Start!</button>
 						<input type="hidden" name="name" value="{name}" />
 					</form>
-				"""
+				""".format(name = name)
 				body += str(dbData) + br
 
 				res = Response(title, body)
