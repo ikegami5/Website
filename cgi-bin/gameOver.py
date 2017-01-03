@@ -26,7 +26,7 @@ def main():
 	name = request.data["name"].value
 
 	dbCursor.execute("""
-		UPDATE users SET {score} WHERE name = {name}
+		UPDATE users SET score = {score} WHERE name = {name}
 	""".format(name = name, score = score))
 	dbConnector.commit()
 
