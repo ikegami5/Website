@@ -2,6 +2,8 @@
 # coding: utf-8
 import MySQLdb
 from httpHandler import Response, Request
+from dbPass import dbName, dbPass
+from htmlTemplate import DBExpression
 
 def main():
 	br = "<br />"
