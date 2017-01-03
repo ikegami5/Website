@@ -18,11 +18,7 @@ def main():
 	data = request.data
 	title = "Log in success!"
 	br = "<br />"
-	body = """
-		<button type="button" onclick="location.href='/cgi-bin/question.py'">
-			Start!
-		</button>
-	"""
+	body = ""
 	errorLoc = "Location: /cgi-bin/signUp.py?error={error}\n"
 	if "name" not in data:
 		print(errorLoc.format(error = "noName"))
@@ -46,6 +42,13 @@ def main():
 			dbCursor.execute("SELECT * FROM users")
 			for row in dbCursor.fetchall():
 				dbData.appendData(row[0], str(row[2]))
+
+			body += """
+				<form method="post" action="/cgi-bin/question.py">
+					<button type="submit">Start!</button>
+					<input type="hidden" name="name" value="{name}" />
+				</form>
+			""".format(name = name)
 			body += str(dbData) + br
 
 			res = Response(title, body)
