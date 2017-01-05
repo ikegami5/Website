@@ -36,9 +36,13 @@ class Expression(object):
 			if isinstance(self.arg1, Expression):
 				if self.arg1.operator in [Operator.PLUS, Operator.MINUS]:
 					expr1 = "( " + str(self.arg1) + " ) "
+			else:
+				expr1 = str(self.arg1) + " "
 			if isinstance(self.arg2, Expression):
 				if self.arg2.operator in [Operator.PLUS, Operator.MINUS]:
 					expr2 = " ( " + str(self.arg2) + " )"
+			else:
+				expr2 = " " + str(self.arg2)
 		return expr1 + self.operator.value() + expr2
 
 if __name__ == '__main__':
