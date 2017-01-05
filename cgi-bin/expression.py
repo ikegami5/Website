@@ -3,7 +3,7 @@
 
 import math
 from fractions import Fraction
-from operators.Operator import PLUS, MINUS, TIMES, DIVIDE
+from operators import Operator
 
 class Expression(object):
 
@@ -19,31 +19,31 @@ class Expression(object):
 			self.arg2 = Fraction(arg2)
 
 	def value(self):
-		if self.operator == PLUS:
+		if self.operator == Operator.PLUS:
 			return self.arg1 + self.arg2
-		elif self.operator == MINUS:
+		elif self.operator == Operator.MINUS:
 			return self.arg1 - self.arg2
-		elif self.operator == TIMES:
+		elif self.operator == Operator.TIMES:
 			return self.arg1 * self.arg2
-		elif self.operator == DIVIDE:
+		elif self.operator == Operator.DIVIDE:
 			return self.arg1 / self.arg2
 
 	#def __add__(self, other):
 
 
 	def __str__(self):
-		if self.operator in [TIMES, DIVIDE]:
+		if self.operator in [Operator.TIMES, Operator.DIVIDE]:
 			if isinstance(self.arg1, Expression):
-				if self.arg1.operator in [PLUS, MINUS]:
+				if self.arg1.operator in [Operator.PLUS, Operator.MINUS]:
 					expr1 = "( " + str(self.arg1) + " ) "
 			if isinstance(self.arg2, Expression):
-				if self.arg2.operator in [PLUS, MINUS]:
+				if self.arg2.operator in [Operator.PLUS, Operator.MINUS]:
 					expr2 = " ( " + str(self.arg2) + " )"
 		return expr1 + self.operator.value() + expr2
 
 if __name__ == '__main__':
-	a = Expression(3, PLUS, 5)
-	b = Expression(4, MINUS, 2)
-	c = Expression(a, TIMES, b)
+	a = Expression(3, Operator.PLUS, 5)
+	b = Expression(4, Operator.MINUS, 2)
+	c = Expression(a, Operator.TIMES, b)
 	print(c) # ( 3 + 5 ) × ( 4 - 2 )
-	print(c.value()) #16
+	print(c.value()) # 16
