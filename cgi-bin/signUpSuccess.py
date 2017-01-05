@@ -16,7 +16,7 @@ def main():
 
 	request = Request()
 	data = request.data
-	title = "Log in success!"
+	title = "Sign up success!"
 	br = "<br />"
 	body = ""
 	errorLoc = "Location: /cgi-bin/signUp.py?error={error}\n"
