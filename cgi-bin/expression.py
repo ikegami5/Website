@@ -41,7 +41,7 @@ class Expression(object):
 			if isinstance(self.arg2, Expression):
 				if self.arg2.operator in [Operator.PLUS, Operator.MINUS]:
 					expr2 = " ( " + str(self.arg2) + " )"
-		return expr1 + self.operator.value() + expr2
+		return expr1 + self.operator.value + expr2
 
 if __name__ == '__main__':
 	a = Expression(3, Operator.PLUS, 5)
