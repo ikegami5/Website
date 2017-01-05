@@ -3,7 +3,7 @@
 
 import math
 from fractions import Fraction
-from operator.Operator import PLUS, MINUS, TIMES, DIVIDE
+from operators.Operator import PLUS, MINUS, TIMES, DIVIDE
 
 class Expression(object):
 
