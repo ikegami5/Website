@@ -20,4 +20,4 @@ class IntQuestion(Question):
 		return self.expression.value()
 
 	def __str__(self):
-		str(self.expression)
+		return str(self.expression)
