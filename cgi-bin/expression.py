@@ -60,16 +60,31 @@ class Expression(object):
 		else:
 			return NotImplemented
 
+	def __radd__(self, other):
+		return self.__add__(other)
+
+	def __rsub__(self, other):
+		return self.__sub__(other)
+
+	def __rmul__(self, other):
+		return self.__mul__(other)
+
+	def __rtruediv__(self, other):
+		return self.__truediv__(other)
+
 	def __str__(self):
 		expr1 = str(self.arg1) + " "
 		expr2 = " " + str(self.arg2)
-		if self.operator in [Operator.TIMES, Operator.DIVIDE]:
-			if isinstance(self.arg1, Expression):
+		if isinstance(self.arg1, Expression):
+			if self.operator in [Operator.TIMES, Operator.DIVIDE]:
 				if self.arg1.operator in [Operator.PLUS, Operator.MINUS]:
-					expr1 = "( " + str(self.arg1) + " ) "
-			if isinstance(self.arg2, Expression):
+					expr1 = "(" + str(self.arg1) + ") "
+		if isinstance(self.arg2, Expression):
+			if self.operator in [Operator.TIMES, Operator.MINUS]:
 				if self.arg2.operator in [Operator.PLUS, Operator.MINUS]:
-					expr2 = " ( " + str(self.arg2) + " )"
+					expr2 = " (" + str(self.arg2) + ")"
+			elif self.operator == Operator.DIVIDE:
+				expr2 = " (" + str(self.arg2) + ")"
 		return expr1 + self.operator.value + expr2
 
 if __name__ == '__main__':
