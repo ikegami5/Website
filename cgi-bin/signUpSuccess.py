@@ -47,6 +47,8 @@ def main():
 				<form method="post" action="/cgi-bin/question.py">
 					<button type="submit">Start!</button>
 					<input type="hidden" name="name" value="{name}" />
+					<input type="hidden" name="number" value="1" />
+					<input type="hidden" name="score" value="0" />
 				</form>
 			""".format(name = name)
 			body += str(dbData) + br

@@ -18,16 +18,16 @@ def main():
 	dbCursor = dbConnector.cursor()
 
 	request = Request()
-	answer = int(request.data["answer"].value)
-	if answer == 2:
-		score = 1
-	else:
-		score = 0
+	score = int(request.data["score"].value)
+	answer = request.data["answer"].value
+	rightAnswer = request.data["rightAnswer"].value
+	if rightAnswer == answer:
+		score = score + 1
 	name = request.data["name"].value
 
 	dbCursor.execute("""
 		UPDATE users SET score = {score} WHERE name = "{name}"
-	""".format(name = name, score = score))
+	""".format(name = name, score = str(score)))
 	dbConnector.commit()
 
 	dbData = DBExpression("Name", "Score")
@@ -37,7 +37,7 @@ def main():
 
 	body = """
 		score = {score}{br}
-	""".format(br = br, score = score)
+	""".format(br = br, score = str(score))
 	body += str(dbData) + br
 	res = Response(title, body)
 	res.respond()
