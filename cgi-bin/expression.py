@@ -78,3 +78,14 @@ if __name__ == '__main__':
 	c = Expression(a, Operator.TIMES, b)
 	print(c) # ( 3 + 5 ) × ( 4 - 2 )
 	print(c.value()) # 16
+	d = Expression(a, Operator.MINUS, b)
+	print(d) # 3 + 5 - ( 4 - 2 )
+	print(d.value()) # 6
+	e = Expression(4, Operator.DIVIDE, 3)
+	f = Expression(4, Operator.DIVIDE, 5)
+	g = Expression(e, Operator.DIVIDE, f)
+	print(g) # 4 ÷ 3 ÷ ( 4 ÷ 5 )
+	print(g.value()) # 5/3
+	h = Expression(Fraction(3, 5), Operator.TIMES, b)
+	print(h) # 3/5 × ( 4 - 2 )
+	print(h.value()) # 6/5
