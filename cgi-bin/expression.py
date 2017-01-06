@@ -28,8 +28,37 @@ class Expression(object):
 		elif self.operator == Operator.DIVIDE:
 			return self.arg1 / self.arg2
 
-	#def __add__(self, other):
+	def __add__(self, other):
+		if isinstance(other, Expression):
+			return self.value() + other.value()
+		elif isinstance(other, Fraction):
+			return self.value() + other
+		else:
+			return NotImplemented
 
+	def __sub__(self, other):
+		if isinstance(other, Expression):
+			return self.value() - other.value()
+		elif isinstance(other, Fraction):
+			return self.value() - other
+		else:
+			return NotImplemented
+
+	def __mul__(self, other):
+		if isinstance(other, Expression):
+			return self.value() * other.value()
+		elif isinstance(other, Fraction):
+			return self.value() * other
+		else:
+			return NotImplemented
+
+	def __truediv__(self, other):
+		if isinstance(other, Expression):
+			return self.value() / other.value()
+		elif isinstance(other, Fraction):
+			return self.value() / other
+		else:
+			return NotImplemented
 
 	def __str__(self):
 		expr1 = str(self.arg1) + " "
