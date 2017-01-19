@@ -64,17 +64,26 @@ class Expression(object):
 		return self.__add__(other)
 
 	def __rsub__(self, other):
-		return self.__sub__(other)
+		return other - self.value()
 
 	def __rmul__(self, other):
 		return self.__mul__(other)
 
 	def __rtruediv__(self, other):
-		return self.__truediv__(other)
+		return other / self.value()
+
+	def __lt__(self, other):
+		return self.value() < other
 
 	def __str__(self):
-		expr1 = str(self.arg1) + " "
-		expr2 = " " + str(self.arg2)
+		if self.arg1 < 0:
+			expr1 = "(" + str(self.arg1) + ") "
+		else:
+			expr1 = str(self.arg1) + " "
+		if self.arg2 < 0:
+			expr2 = " (" + str(self.arg2) + ")"
+		else:
+			expr2 = " " + str(self.arg2)
 		if isinstance(self.arg1, Expression):
 			if self.operator in [Operator.TIMES, Operator.DIVIDE]:
 				if self.arg1.operator in [Operator.PLUS, Operator.MINUS]:
