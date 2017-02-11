@@ -72,18 +72,17 @@ class Expression(object):
 	def __rtruediv__(self, other):
 		return other / self.value()
 
-	def __lt__(self, other):
-		return self.value() < other
-
 	def __str__(self):
-		if self.arg1 < 0:
-			expr1 = "(" + str(self.arg1) + ") "
-		else:
-			expr1 = str(self.arg1) + " "
-		if self.arg2 < 0:
-			expr2 = " (" + str(self.arg2) + ")"
-		else:
-			expr2 = " " + str(self.arg2)
+		if isinstance(self.arg1, Fraction):
+			if self.arg1 < 0:
+				expr1 = "(" + str(self.arg1) + ") "
+			else:
+				expr1 = str(self.arg1) + " "
+		if isinstance(self.arg2, Fraction):
+			if self.arg2 < 0:
+				expr2 = " (" + str(self.arg2) + ")"
+			else:
+				expr2 = " " + str(self.arg2)
 		if isinstance(self.arg1, Expression):
 			if self.operator in [Operator.TIMES, Operator.DIVIDE]:
 				if self.arg1.operator in [Operator.PLUS, Operator.MINUS]:
