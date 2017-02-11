@@ -11,8 +11,7 @@ class Question(object):
 class IntQuestion(Question):
 
 	def __init__(self):
-		expression = self.generateExpression()
-		self.expression = expression
+		self.expression = self.generateExpression()
 
 	def generateExpression(self):
 
