@@ -29,7 +29,7 @@ def main():
 		{question} = <input type="text" name="answer" />{br}
 		<button type="submit">確定</button>{br}
 	""".format(question = str(question), br = br)
-	form = Form(link, body = formBody, *hidden)
+	form = Form("post", link, formBody, *hidden)
 
 	body = str(form)
 	res = Response(title, body)

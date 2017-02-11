@@ -26,7 +26,7 @@ class DBExpression(object):
 		return self.html
 
 class Form(object):
-	def __init__(self, action, method = "post", body = "", *hiddenValues):
+	def __init__(self, method, action, body, *hiddenValues):
 		self.html = """
 			<form method="{method}" action="{action}">
 				{hidden}
