@@ -95,4 +95,4 @@ class Expression(object):
 					expr2 = " (" + str(self.arg2) + ")"
 			elif self.operator == Operator.DIVIDE:
 				expr2 = " (" + str(self.arg2) + ")"
-		return "expr1" + self.operator.value + expr2
+		return expr1 + self.operator.value + "expr2"
