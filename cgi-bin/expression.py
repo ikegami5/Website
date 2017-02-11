@@ -86,13 +86,17 @@ class Expression(object):
 			else:
 				expr2 = " " + str(self.arg2)
 		if isinstance(self.arg1, Expression):
-			if self.operator in [Operator.TIMES, Operator.DIVIDE]:
-				if self.arg1.operator in [Operator.PLUS, Operator.MINUS]:
-					expr1 = "(" + str(self.arg1) + ") "
+			if (self.operator in [Operator.TIMES, Operator.DIVIDE] and
+				self.arg1.operator in [Operator.PLUS, Operator.MINUS]):
+				expr1 = "(" + str(self.arg1) + ") "
+			else:
+				expr1 = str(self.arg1) + " "
 		if isinstance(self.arg2, Expression):
-			if self.operator in [Operator.TIMES, Operator.MINUS]:
-				if self.arg2.operator in [Operator.PLUS, Operator.MINUS]:
-					expr2 = " (" + str(self.arg2) + ")"
+			if (self.operator in [Operator.TIMES, Operator.MINUS] and
+				self.arg2.operator in [Operator.PLUS, Operator.MINUS]):
+				expr2 = " (" + str(self.arg2) + ")"
 			elif self.operator == Operator.DIVIDE:
 				expr2 = " (" + str(self.arg2) + ")"
-		return str(type(self.arg1)) + self.operator.value + expr2
+			else:
+				expr2 = " " + str(self.arg2)
+		return expr1 + self.operator.value + expr2
