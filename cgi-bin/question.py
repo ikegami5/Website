@@ -1,6 +1,7 @@
 #!/usr/local/bin/python3
 # coding: utf-8
 from httpHandler import Response, Request
+from htmlTemplate import Form
 from generateQuestion import IntQuestion
 
 def main():
@@ -22,17 +23,15 @@ def main():
 		link = "/cgi-bin/question.py"
 	question = IntQuestion()
 
-	body = """
-		<form method="post" action="{link}">
-			<input type="hidden" name="name" value="{name}" />
-			<input type="hidden" name="number" value="{number}" />
-			<input type="hidden" name="score" value="{score}" />
-			<input type="hidden" name="rightAnswer" value="{rightAnswer}" />
-			{question} = <input type="text" name="answer" />{br}
-			<button type="submit">確定</button>{br}
-		</form>
-	""".format(br = br, name = name, link = link, number = str(number + 1), 
-		question = str(question), score = str(score), rightAnswer = str(question.answer()))
+	hidden = [("name", name), ("number", str(number + 1)), ("score", str(score)), 
+		("rightAnswer", str(question.answer()))]
+	formBody = """
+		{question} = <input type="text" name="answer" />{br}
+		<button type="submit">確定</button>{br}
+	""".format(question = str(question), br = br)
+	form = Form(link, body = formBody, *hidden)
+
+	body = str(form)
 	res = Response(title, body)
 	res.respond()
 
