@@ -73,8 +73,8 @@ class Expression(object):
 		return other / self.value()
 
 	def __str__(self):
-		expr1 = ""
-		expr2 = ""
+		expr1 = str(type(self.arg1))
+		expr2 = str(type(self.arg2))
 		if isinstance(self.arg1, Fraction):
 			if self.arg1 < 0:
 				expr1 = "(" + str(self.arg1) + ") "
