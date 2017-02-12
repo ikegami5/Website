@@ -70,6 +70,12 @@ button {
 	background-color: lightblue;
 }
 
+button.red {
+	font-size: 1em;
+	padding: 10px 20px;
+	background-color: red;
+}
+
 h3 {
 	background-color: lightgreen;
 }

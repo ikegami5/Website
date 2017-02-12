@@ -3,7 +3,7 @@
 from httpHandler import Response, Request
 import MySQLdb
 from dbPass import dbName, dbPass
-from htmlTemplate import DBExpression
+from htmlTemplate import DBExpression, Form
 from myError import DBError
 
 def main():
@@ -44,14 +44,12 @@ def main():
 				for row in dbCursor.fetchall():
 					dbData.appendData(row[0], str(row[2]))
 
-				body += """
-					<form method="post" action="/cgi-bin/question.py">
-						<button type="submit">Start!</button>
-						<input type="hidden" name="name" value="{name}" />
-						<input type="hidden" name="number" value="1" />
-						<input type="hidden" name="score" value="0" />
-					</form>
-				""".format(name = name)
+				hidden = [("name", name), ("number", "1"), ("score", "0")]
+				formBody = """
+					<button type="submit">Start!</button>
+				"""
+				form = Form("post", "/cgi-bin/question.py", formBody, *hidden)
+				body += str(form)
 				body += str(dbData) + br
 
 				res = Response(title, body)
