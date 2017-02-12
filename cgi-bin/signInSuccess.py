@@ -46,7 +46,7 @@ def main():
 
 				hidden = [("name", name), ("number", "1"), ("score", "0")]
 				formBody = """
-					<button type="submit">Start!</button>
+					<button class="red" type="submit">Start!</button>
 				"""
 				form = Form("post", "/cgi-bin/question.py", formBody, *hidden)
 				body += str(form)
