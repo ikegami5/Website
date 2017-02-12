@@ -29,7 +29,7 @@ def main():
 		dbCursor.execute("""
 			SELECT * FROM users WHERE name = "{name}"
 		""".format(name = name))
-		if score > dbCursor.fetchone()[0][2]:
+		if score > int(dbCursor.fetchone()[0][2]):
 			dbCursor.execute("""
 				UPDATE users SET score = {score} WHERE name = "{name}"
 			""".format(name = name, score = str(score)))
@@ -38,7 +38,7 @@ def main():
 		dbData = DBExpression("Name", "Score")
 		dbCursor.execute("SELECT * FROM users")
 		for row in dbCursor.fetchall():
-			dbData.appendData(row[0], str(row[2]))
+			dbData.appendData(row[0], row[2])
 
 		body = """
 			score = {score}{br}
