@@ -59,8 +59,8 @@ def main():
 						</button>
 					"""
 					deleteForm = Form("post", "/cgi-bin/delete.py", deleteFormBody, ("name", name))
-					body += str(form)
-					body += str(deleteForm)
+					body += str(form) + br
+					body += str(deleteForm) + br
 					body += str(dbData) + br
 
 					res = Response(title, body)

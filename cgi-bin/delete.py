@@ -17,15 +17,16 @@ def main():
 		dbCursor = dbConnector.cursor()
 
 		request = Request()
-		toDo = request.data.getValue("button")
+		toDo = request.data["button"].value
+		br = "<br />"
 		title = ""
 		body = ""
 		if toDo == "reset":
 			title = "Reset score"
-			body = "スコアをリセットします。よろしいですか？"
+			body = "スコアをリセットします。よろしいですか？" + br
 		elif toDo == "delete":
 			title = "Delete account"
-			body = "アカウントを消去します。よろしいですか？"
+			body = "アカウントを消去します。よろしいですか？" + br
 		res = Response(title, body)
 		res.respond()
 	finally:
