@@ -54,4 +54,5 @@ function update() {
 
 function render() {
 	renderingContext.clearRect(0, 0, canvas.width, canvas.height);
+	renderingContext.drawImage(Asset.images['background'], 0, 0);
 }
