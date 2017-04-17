@@ -58,7 +58,8 @@ def main():
 							Reset score
 						</button>
 					"""
-					deleteForm = Form("post", "/cgi-bin/delete.py", deleteFormBody, ("name", name))
+					deleteForm = Form("post", "/cgi-bin/deleteConfirm.py", deleteFormBody, 
+						("name", name), ("password", password))
 					body += str(form) + br
 					body += str(deleteForm) + br
 					body += str(dbData) + br

@@ -17,18 +17,26 @@ def main():
 		dbCursor = dbConnector.cursor()
 
 		request = Request()
-		toDo = request.data["button"].value
-		br = "<br />"
-		title = ""
-		body = ""
+		data = request.data
+		toDo = data["toDo"].value
+		name = data["name"].value
+		password = data["password"].value
+		button = data["button"].value
+		form = None
+
 		if toDo == "reset":
-			title = "Reset score"
-			body = "スコアをリセットします。よろしいですか？" + br
+			if button == "yes":
+				pass
+			elif button == "no":
+				form = Form("post", "/cgi-bin/signInSuccess.py", "", 
+					("name", name), ("password", password))
 		elif toDo == "delete":
-			title = "Delete account"
-			body = "アカウントを消去します。よろしいですか？" + br
-		res = Response(title, body)
-		res.respond()
+			if button == "yes":
+				pass
+			elif button == "no":
+				form = Form("post", "/cgi-bin/signInSuccess.py", "", 
+					("name", name), ("password", password))
+
 	finally:
 		dbCursor.close()
 		dbConnector.close()
