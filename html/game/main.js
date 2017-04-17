@@ -23,7 +23,7 @@ var Asset = {
 		};
 		this.assets.forEach(function(asset) {
 			if (asset.type === 'image') {
-				this._loadImage(asset, onLoad);
+				Asset._loadImage(asset, onLoad);
 			}
 		});
 	},
