@@ -1,11 +1,3 @@
-var CANVAS_WIDTH = 800;
-var CANVAS_HEIGHT = 600;
-
-window.addEventListener('load', init);
-
-var canvas;
-var renderingContext;
-
 var Asset = {
 	assets: [
 		{type: 'image', name: 'background', src: '/game/assets/background.png'}
@@ -45,23 +37,3 @@ var Asset = {
 	}
 
 };
-
-function init() {
-	canvas = document.getElementById('mainCanvas');
-	renderingContext = canvas.getContext('2d');
-	canvas.width = CANVAS_WIDTH;
-	canvas.height = CANVAS_HEIGHT;
-	Asset.loadAssets(function() {
-		requestAnimationFrame(update);
-	});
-}
-
-function update() {
-	requestAnimationFrame(update);
-	render();
-}
-
-function render() {
-	renderingContext.clearRect(0, 0, canvas.width, canvas.height);
-	renderingContext.drawImage(Asset.images['background'], 0, 0, 800, 600);
-}
